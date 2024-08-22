@@ -103,11 +103,38 @@
         <b>Stack</b> - LIFO
         <b>Queue</b> - FIFO, almost the opposite of stacks
         <b>Sorted List</b>
-        <b>Map</b>
-        <b>Tree</b>
-        <b>Graph</b>
+        <b>Map</b> - aka: dictionaries, tables, or 'associative array'; information is stored as a key:value pair 
+            - the key must be unique, the value can be shared
+        <b>Tree</b> - nonlinear; capable of having many successor / 'children' elements; beginning is the root, the root has no parent.
+        <b>Graph</b> - made of elements called 'nodes' or 'vertices', also has 'edges'. Unlike trees there a no restrictions between elements - the edges describe relationships among vertices
+
+    <b>What is a data structure?</b>
 <h2>01.05: Basic Structuring Mechanisms</h2>
-    <b>Direct vs Indirect addressing</b>
+    <h3>Memory</h3>
+    When doing Low-Level programming we deal with:
+    <b>Direct vs Indirect addressing</b> 
+        - Direct Addressing: corresponds to how 'primative variables' are used in Java
+        - Indirect Addressing: for strings the 'str' denoting a string is stored a memory node, then each additional character is stored at another memory node block that is referenced at the initial stored 'str' node.
+
+    <b>References</b>- aka links, addresses, or pointers
+    <b>null</b> = absence of reference, this is a placeholder, letting the program know there could be a value in the future.
+
+    <b>Primative types</b> - hold the value of a variable, 'by value'   
+    <b>Reference types</b> - refer to a location where the value is stored, 'by reference'
+
+    <b>Aliases</b> - refers to another previously assigned value, best to avoid aliases in programming where possible.
+    <b>Garbage</b> - memory space allocated to a program that is no available to access by a program. garbage takes up memory
+        * Java has a run-time garbage collection system that identifies and deallocates storage space; this returns the space to the free pool for the creation of new objects.               
+
+    <b>Dynamic Memory Management</b> - process of allocating and deallocating memory into the free pool
+
+    <b>Comparing Objects</b>- 'referenced' objects can only be identical using the '==' operator if one is an alias of the other. otherwise the program will see they contain to different reference pointers.
+    <b>Parameters</b>
+
+    <h3></h3>
+
+
+
 <h2>01.06 Comparing Algorithms: Order of Growth Analysis</h2>
 <h2>01.07: Summary</h2>
     This chapter is all about organization.
@@ -136,7 +163,7 @@
         problems!
     </i>
 
-<h3>01 - Project</h3>
+<h2>01 - Project</h2>
 - Create a program that simulates a small part of a Baseball game.  You should have a Pitcher who throws a Ball to a Batter, who will swing at the Ball either hitting it or striking out.
 
 Your program should have a main class to test everything.  You should create a Pitcher and a Batter, then simulate three pitches and display whether they were hit or if they were missed.
