@@ -9,16 +9,99 @@
 <pre>
 <h1>CTEC 243 Data Structures wk01 - Lesson 01: Getting Organized</h1>   
 <h2>01.01: Classes, Objects, and Applications</h2>
-    <b>Objects</b> - have information and behavior (rep)
+    <b>Objects</b> - have information and behavior (they can perform actions); Simula67 was first object oriented programming language
+        <b><i>Information</i></b> - attributes of the object
+        <b><i>Behavior</i></b> - responsibilities of the object
+    
+    <b>Class</b> - define the structure of an object or set of objects. 
+                   Class includes variables (data) and methods (actions)
+
+    <i>static</i> - creates a 'class' variable - it will be the same for all objects in the class, it is a static variable and will not change.
+    <i>final</i> - modifier states that the variable is in it's final form and cannot be modified, it creates a 'constant'
+    <i>CONSTANTS</i> - naming convention, constants names are all UPPERCASE
+
+    <b>constructors</b> - setter 
+    <b>observers</b> - getter    
+    <b>transformers</b> - allow object to be changed / modified
+
+    <b>Access Control Modifiers</b>
+        <b>public</b> - available everywhere
+        <b>protected</b> - available within all subclasses
+        <b>package</b> - available within the package
+        <b>private</b> - only available within the class
+    
+    <b>Unified Method</b> - features 3 key elements: 
+        <b><i>01) Use-case driven:</i></b>
+        <b><i>02) Architecture-centric:</i></b> refers to structure of target system. 
+        <b><i>03) Iterative and incremental:</i></b> involves development cycles that build on foundation of predecessors.
+
+    <b>Unified Modeling Language (UML):</b> 
+        ex: <i>Date myDate = new Date(6, 24, 1951);</i>
+    
+    <b>Java Virtual Machine</b>
+    <b>Java Application</b> - the class that contains the 'main' method for the program
+
+    <b>scanner class</b> - for input
+    <b>Method Call</b>
 <h2>01.02: Organizing Classes</h2>
+    <h3>Inheritance</h3> - both an organizational and a reuse mechanism
+        <i>subclass</i> - inherits features of it's superclass
+        <i>superclass</i> - the class above a subclass, this is a class above a current class
+        
+        <b>immutable</b> - without change, protected from change
+        <b>extends</b> - keyword indicating inheritance
+        <b><i>super</i></b> - used to pass information to the superclass of the object
+
+        <b>Inheritance Tree</b> - each class can extend only one additional class, inheritance relationship is therefore referred to as a tree. 
+            - in Java the <b><i>Object class</i></b> is the root of the inheritance Tree
+            - <i>@Override</i> - notation to override, used to redefine an inhereited method
+
+        <b>Polymorphism</b> - greek for 'many forms'; a variable can reference objects of different classes at different times during the execution of a program. 
+            - 2 major polmorphic references in Java: 
+                =- Inheritance-based polymorphism (dealt with in this chapter)
+                =- Interface-based polymorphism (we look at in chapter 2: Abstraction)
+
+        <b>Run-time binding / dynamic binding</b> - 
+
+    <h3>Packages</h3> - group together classes into packages as another form of organization
+        - you can organize files into packages
+        - compile a package separately and import it into a program.
+        - make it easy for programs to use common class files.
+        - help use avoid naming conflicts (2 classes CAN share the same name if they are in different packages)
+
+        <b>Package Syntax</b> - ex: <i>package someName;</i> - most start with 'package' and end with the semi-colon
+            - naming convention: packages start with lowercase letter to help distinguish from Class names. 
+
+        <b>Compilation units</b> - can import packages that are created
+            - packages can only have 1 public class per package, other classes in the packages are non-public
+                ex: <i>package gamma;
+                       public class One{...}
+                       class Two{...} 
+                </i>
+            a programmer can then 'import' the public class 'One'. The file would need to be named 'One.java' to adhere to Java naming convention.
+                - the file 'One.java' would be stored in the directory <b><i>gamma</i></b>
+
+            * The 'import' statement:
+                <i>import gamma.*;
+                   import gamma.One; 
+                </i>
+
 <h2>01.03: Exceptional Situations</h2>
+        <b>Handling Exceptional Situations</b> - typically referred to as 'Exceptions'
+            - Define the exception: usually as a subclass of Java's <i>Exception</i> class
+            - Generate (raising) the exception: recognize situation and use <i>throw</i> statement to 'announce' an exception has occured.
+            - Handling the exception: use <i>try-catch</i> statement to discover that exception has been thrown and take appropriate action
+
+        <b>Exceptions and Classes</b>
+                
+
 <h2>01.04: Data Structures</h2>
     <h3>Implementation-Dependent</h3>
-        <b>Array</b>
-        <b>Linked List</b>
-    <h3>Implementation-Independent</h3>
-        <b>Stack</b>
-        <b>Queue</b>
+        <b>Array</b> - used by accessing their position in the structure.
+        <b>Linked List</b> - similar to a chain, each seperate element is linked to the element that follows in the list.
+    <h3>Implementation-Independent</h3> - more abstractly stored structure than array or linked list
+        <b>Stack</b> - LIFO
+        <b>Queue</b> - FIFO, almost the opposite of stacks
         <b>Sorted List</b>
         <b>Map</b>
         <b>Tree</b>
@@ -61,15 +144,18 @@ Your program should have a main class to test everything.  You should create a P
 Planning:
 Ball
 Create a Ball class that contains basic information on how fast it's travelling and where it currently is
+
 Pitcher
 Create a Pitcher class that can "throw" a Ball (meaning the pitcher should be able to add speed and direction to the ball).
 It's okay if your Pitcher is able to conjure new Balls out of thin air at will
 When your Pitcher throws a ball, they should throw it at a random speed within a specified range (the range can be whatever makes sense to you)
+
 Batter
 Create a Batter class who tries to "hit" the ball
 The Batter needs a way to receive a ball from the Pitcher
 To hit the ball, the batter should generate a random “speed check” number.  If the ball is going the speed check speed or slower, then the Batter successfully hits the ball.  If not, then the batter misses it.
 Assume the Batter will hit the ball at the exact same speed as it is thrown.  This is a wacky game of baseball.
+
 Main
 In your base class in the main method, create a Pitcher and a Batter and simulate a number of tosses entered in by the user at run time, reporting the results to the console.
 
