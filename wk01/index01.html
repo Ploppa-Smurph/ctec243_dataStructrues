@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC 243 Data Structures wk01 - Lesson 01: Getting Organized</title>
+</head>
+<body>
+<pre>
+<h1>CTEC 243 Data Structures wk01 - Lesson 01: Getting Organized</h1>   
+<h2>01.01: Classes, Objects, and Applications</h2>
+    <b>Objects</b> - have information and behavior (rep)
+<h2>01.02: Organizing Classes</h2>
+<h2>01.03: Exceptional Situations</h2>
+<h2>01.04: Data Structures</h2>
+    <h3>Implementation-Dependent</h3>
+        <b>Array</b>
+        <b>Linked List</b>
+    <h3>Implementation-Independent</h3>
+        <b>Stack</b>
+        <b>Queue</b>
+        <b>Sorted List</b>
+        <b>Map</b>
+        <b>Tree</b>
+        <b>Graph</b>
+<h2>01.05: Basic Structuring Mechanisms</h2>
+    <b>Direct vs Indirect addressing</b>
+<h2>01.06 Comparing Algorithms: Order of Growth Analysis</h2>
+<h2>01.07: Summary</h2>
+    This chapter is all about organization.
+    <i>
+             Object orientation allows developers to organize their solutions around models of re-
+        ality, accruing benefits of understandability, reusability, and maintainability. The primary
+        construct for creating systems using this approach is the class. Classes are used to create
+        objects that work together to provide solutions to problems. Java’s inheritance mecha-
+        nism and package construct help us organize our classes.
+             Java’s exception handling mechanisms provide a powerful way to organize our sys-
+        tem’s responses to special situations. We can choose to handle exceptional situations
+        where they are first encountered or to throw the responsibility out to another level. A
+        good understanding of this mechanism is a crucial ingredient for creating safe, reliable
+        systems.
+             Programs operate on data, so how the data are organized is of prime importance. Data
+        structures deal with this organization. Several classic organizational structures have been
+        identified through the years to help programmers create correct and efficient solutions
+        to problems. The Java language provides basic structuring mechanisms for creating these
+        structures—namely, the array and the reference mechanisms. Order of growth notation
+        is an approach for classifying the efficiency of the algorithms that we will employ when
+        implementing and using our data structures.
+             Programmers are problem solvers. Object orientation allows seamless integration of
+        problem analysis and design, resulting in problem solutions that are maintainable and
+        reusable. Data structures provide ways of organizing the data of the problem domain so
+        that solutions are correct and efficient. Staying organized is the key to solving difficult
+        problems!
+    </i>
+
+<h3>01 - Project</h3>
+- Create a program that simulates a small part of a Baseball game.  You should have a Pitcher who throws a Ball to a Batter, who will swing at the Ball either hitting it or striking out.
+
+Your program should have a main class to test everything.  You should create a Pitcher and a Batter, then simulate three pitches and display whether they were hit or if they were missed.
+
+Planning:
+Ball
+Create a Ball class that contains basic information on how fast it's travelling and where it currently is
+Pitcher
+Create a Pitcher class that can "throw" a Ball (meaning the pitcher should be able to add speed and direction to the ball).
+It's okay if your Pitcher is able to conjure new Balls out of thin air at will
+When your Pitcher throws a ball, they should throw it at a random speed within a specified range (the range can be whatever makes sense to you)
+Batter
+Create a Batter class who tries to "hit" the ball
+The Batter needs a way to receive a ball from the Pitcher
+To hit the ball, the batter should generate a random “speed check” number.  If the ball is going the speed check speed or slower, then the Batter successfully hits the ball.  If not, then the batter misses it.
+Assume the Batter will hit the ball at the exact same speed as it is thrown.  This is a wacky game of baseball.
+Main
+In your base class in the main method, create a Pitcher and a Batter and simulate a number of tosses entered in by the user at run time, reporting the results to the console.
+
+</pre>
+</body>
+</html>
