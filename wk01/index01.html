@@ -131,11 +131,41 @@
     <b>Comparing Objects</b>- 'referenced' objects can only be identical using the '==' operator if one is an alias of the other. otherwise the program will see they contain to different reference pointers.
     <b>Parameters</b>
 
-    <h3></h3>
+    <h3>Array</h3>
+    The 2nd basic structuring construct is the Array. 
 
+    programmers acces a sequence of locations using the array. 
+        - Arrays are 'non-primative' and are handled by reference.
+             - best not to use aliases on Arrays, since they are referenced, also effects 'comparison' and use of arguements. 
 
+    <b>Arrays of Objects</b> - linear, has a sequence of elements
+
+    <b>Two-Dimensional Arrays</b> - a table, has rows and columns
+        ex: <i>
+            double [][] alpha;
+            alpha = new double[100][9]
+        </i> 
+    this code will create a new 'double' array with 100 rows and 9 columns.
+        - 1st [] = row
+        - 2nd [] = column   
+
+    * in Java two-dimensional arrays = array of references to array objects
+        ** three-dimensional arrays = a two-dimensional array whose elements are arrays.
 
 <h2>01.06 Comparing Algorithms: Order of Growth Analysis</h2>
+    <b>Algorithm</b> - 
+        <b>Sequential search</b> - guess 1 number after the next until you find the answer, counting directly to the next sequential number.
+        <b>Binary search</b> - eliminate half of the numbers each time by guessing the halfway mark and seeing if the value is higher or lower than the guessed amount. loop this process until you determine the number.
+
+    <b>Measuring an Algorithm's Time Efficiency</b>
+        <b>Best Case Complexity</b>
+        <b>Average Case Complexity</b>
+        <b>Worst Case Complexity</b>
+    
+    <b>Order of Growth</b>
+    <b>Selection Sort</b>
+    <b>Common Orders of Growth</b>
+
 <h2>01.07: Summary</h2>
     This chapter is all about organization.
     <i>
