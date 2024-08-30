@@ -24,12 +24,50 @@
         - 'top' = returns the top element of the stack; aka 'peek'
 
 <h3>02.02a - Building an Array Stack</h3>
+        <strong>Stack Interfaces</strong> - methods / behaviors we expect from the stack
+            - <em>push(T element)</em> - push item to stack, where t is data type and element is information to push
+                can throw a StackOverflowException if stack is full
+
+            - <em>pop()</em> - pops item from stack; 
+                can throw StackUnderflowException if stack is empty
+
+            - <em>top()</em> - aka: 'peek()' returns top element of stack without popping the item off 
+                can throw StackUnderflowException if stack is empty
+
+            - <em>boolean isFull()</em> - returns true if full, otherwise returns false
+
+            - <em>boolean isEmpty</em> - returns true if empty, otherwise returns false
+
+        ** Array stack is a generic and can accept any specified data type.
+
+        can combine ex: <em>boolean push(Integer 156);</em>
+
+        == Creating our own interface == 
+            Interfaces define behavior of a class. It is does not give inheritance in the same way as 'extending' a class. 
+            The define how we work with an object. 
+
+            we create a 'cat' class: cat can walk; cat can meow; cat can eat -- 3 behaviors we assign to the cat
+
+            classes do not inherit information from interface, the class 'implements' the interface to use the function
+
 
 <h3>02.02b - Creating a Linked Stack</h3>
 
 <h3>02.02c - Visualize the Push Operation on Linked Stack</h3>
-
+ 
 <h3>02.02d - Java's Built in Stack</h3>
+
+<h2>02.03 - Collection Elements</h2>
+        <strong>Collection</strong> - is an object that holds other objects; Stacks are an example of a 'first in - last out'
+
+<h2>02.04 - The Stack Interface</h2>
+
+<h2>02.05 - Array-Based Implemnetations</h2>
+
+<h2>02.06 - Application: Balanced Expressions</h2>
+
+<h2>02.07 - Introduction to Linked Lists</h2>
+
 
 
 <h2>02 - Summary</h2>
