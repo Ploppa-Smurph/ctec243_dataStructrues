@@ -73,6 +73,66 @@
 <h2>02 - Summary</h2>
 
 <h2>02 - Quiz</h2>
+<strong>01) In the text we developed Java code for traversing a linked list. Here is a possibly flawed approach for
+    using a traversal to print the contents of the linked list of strings accessed through letters. Indicate the
+    description that best matches the code.</strong>
+    <code>LLNode&gt;String&lt; currNode = letters;
+        while (currNode != null)
+        {
+          currNode = currNode.getLink();
+          System.out.println(currNode.getInfo());
+        }</code>
+    <em>Will bomb is list is not empty; <del>Very Good</del> <del>Correct, but inefficient</del></em>
+
+<strong>02) We deal with ADTs on three levels. On which level do we just deal with the “what” questions, as in
+    what does the ADT model do, what are its responsibilities, what is its interface?</strong>
+    <em>Abstract / Logical</em>
+
+<strong>03) Suppose we have a linked list of Strings, as defined in the text, named presidents. Suppose it
+    contains three nodes, with the first node holding “Washington”, the second node “Adams”, and the third
+    node “Jefferson”. What would be the result of the following code?</strong>
+    <em>'Washington' is printed</em>
+    
+<strong>04) We deal with ADTs on three levels. On which level do we deal with the “how” questions, as in how do
+    we represent the attributes and fulfill the responsibilities of the ADT?</strong>
+    <em>Implementation (or concrete / internal)</em>
+
+<strong>05) Stacks are useful in situations where:</strong>
+    <em>?? ; <del>items are processed in the order they are encountered.</del></em>
+
+<strong>06) If N represents the number of elements on the stack, then the isFull method of the
+    ArrayBoundedStack class is O(N).</strong>
+    <em>False</em>
+
+<strong>07) UML diagrams are a form of abstraction, since they hide details and allow us to concentrate just on
+the major design components.</strong>
+    <em>True</em>
+
+<strong>08) The StackOverflowException is an unchecked exception.</strong>
+    <em>True</em>
+
+<strong>09) If N represents the maximum possible number of elements on the stack, then the LinkedStack
+    constructor is O(N).</strong>
+    <em>False</em>
+
+<strong>10) The following expression is balanced: ( ( xx [ {{ ** }} ] XX ) )</strong>
+    <em>True</em>
+
+<strong>11) Which of the following statements is a legal declaration/instantiation of a Stack object based on the text
+    code?</strong>
+    <em>StackInterface stack = new ArrayBoundedStack (3); <del>StackInterface stack = new</del></em>
+
+<strong>12) Starting with an empty stack, the sequence of operations push(1), push(2), pop(), push(3), leaves the
+    stack, from top to bottom, as:</strong>
+    <em>3, 1</em>
+
+<strong>13) Starting with an empty stack the sequence of operations push(1), push(2), push(3), pop(), leaves the
+    stack, from top to bottom, as:</strong>
+    <em>2, 1</em>
+
+<strong>14) Generics have been part of the Java language since it was first created.</strong>
+    <em>False</em>
+
 
 <h2>02 - Project</h2>
 Given a string of the following characters:
