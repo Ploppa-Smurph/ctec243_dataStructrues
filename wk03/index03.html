@@ -22,10 +22,44 @@
 
 <h2>03.02: Stacks and Queues</h2>
     - both linear data structures
+    - flexible size
 
-    <strong>Stack</strong> - LIFO
+    <strong>Stack</strong> - LIFO (Last in First Out)
+        needs an inner Node class
 
-    <strong>Queue</strong> - FIFO 
+    <strong>Queue</strong> - FIFO (First in First Out)
+        needs an inner Node class 
+        Queue will add to the tail & remove from the head
+
+        boolean isEmpty() {
+            return head == null;        
+        }
+
+        int peek() {
+            return head.data;    
+        }
+
+        void add(int data) {
+            Node node = new Node(data);
+            if (tail != null) {
+                tail.next = node;
+            }
+            tail = node;
+            if (head == null) {
+                head = node;
+            }
+        }
+
+        int remove() {
+            int data = head.data;
+            head = head.next;
+            if (head == null) {
+                tail = null;
+                }
+            }
+            return data;
+
+
 
 </pre>    
 </body>
