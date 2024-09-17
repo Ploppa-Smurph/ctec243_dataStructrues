@@ -49,35 +49,64 @@
 <h2>03.03 - </h2>
 
 <h2>03 - Review</h2>
-<strong>01) </strong>
-    <em></em>
+<strong>01) Assuming values is a full array of int, what does the following recursive method return (assume it is
+    passed a legal argument, a value between 0 and values.length)?</strong>
+    <code>int mystery(int n)
+        {
+            in (n == values.length)
+                return 0;
+            else
+                return (n + mystery(n + 1));
+            }   </code>
+    <em>the sum of the values in the array between index n and the start of the array</em>
 
-<strong>02) </strong>
-    <em></em>
+<strong>02) Given that values is of type LLNode<Integer> and references a linked list (non-empty) of Integer
+    objects, what does the following code do if invoked as mystery(values)?</strong>
+    <code>
+    void mystery(LLNode<Integer> list)
+    {
+      if (list != null)
+      {
+        System.out.println(list.getInfo());
+        mystery(list.getLink());
+      }
+    }</code>
+    <em>Prints the list from start to end</em>
 
-<strong>03) </strong>
-    <em></em>
+<strong>03) Recursion is implemented by the system:</strong>
+    <em>using run time storage allocation.</em>
 
-<strong>04) </strong>
-    <em></em>
+<strong>04) The number of recursive calls that a method goes through before returning is called:</strong>
+    <em>the depth of recursion</em>
 
-<strong>05) </strong>
-    <em></em>
+<strong>05) Given that values is of type LLNode<Integer> and references a linked list (possibly empty) of
+    Integer objects, what does the following code do if invoked as mystery(values)?</strong>
+    <code>int mystery(LLNode<Integer> list)
+        {
+          if (list == null)
+            return 0;
+          else
+            return mystery(list.getLink());
+        }
+        </code>
+    <em>return 0</em>
 
-<strong>06) </strong>
-    <em></em>
+<strong>06) True or False? Recursive methods often have fewer local variables than the equivalent nonrecursive
+    methods.</strong>
+    <em>True</em>
 
-<strong>07) </strong>
-    <em></em>
+<strong>07) The base case does not exist or is not reached when there is infinite recursion.</strong>
+    <em>True</em>
 
-<strong>08) </strong>
-    <em></em>
+<strong>08) True or False? Recursive algorithms are usually implemented with while loops.</strong>
+    <em>False</em>
 
-<strong>09) </strong>
-    <em></em>
+<strong>09) True or False? The binary search algorithm is O(N) where N is the size of the sorted array.</strong>
+    <em>False</em>
 
-<strong>10) </strong>
-    <em></em>
+<strong>10) True or False? The static storage allocation approach creates space for a method when the method
+    is invoked.</strong>
+    <em>False</em>
 
 <strong>11) </strong>
     <em></em>
