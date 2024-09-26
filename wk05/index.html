@@ -52,9 +52,38 @@ Interfaces tell us what the Queue has to be able to do, but not how it does it
 
 <h2>04.04 - An Interactive Test Driver</h2>
 <h2>04.05 - Link-Based Queue Implementations</h2>
-        
+    <strong>Link-Based Queue Implementations</strong>
+    <code>
+    public class LinkedQueue<T> implements QueueInterface<T> {
+    protected LLNode<T> front;
+    protected LLNode<T> rear;
+    protected int numElements = 0;
+    
+    public LinkedQueue() {
+        front = null;
+        rear = null;
+      }
+    }
+    </code>
+
+    you also have to reassign 'rear' as you add new elements to nodes, the rear node increments up
+      as you dequeue the rear will need to decrement down 
+
 <h2>04.06 - Application: Palindromes</h2>
 <h2>04.07 - Queue Variations</h2>
+    <strong>Deque = Double Queue</strong> 
+        <em>Deques 'enqueue' and 'dequeue' from the front or rear, either end!!</em>
+
+    <strong>4 Java Deque Interface Libraries:</strong>
+        - <em>ArrayDeque</em>
+        - <em>ConcurrentLinkedDeque</em>
+        - <em>LinkedBlockingDeque</em>
+        - <em>LinkedList</em>
+
+        Java Queue -- add(E) [instead of enqueue]
+                    - offer() [instead of dequeue]
+                    - peek()
+
 <h2>04.08 - Application: Average Waiting Time</h2>
 <h2>04.09 - Concurrency, Interference, and Synchronization</h2>
 
