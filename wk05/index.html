@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC243 Data Structures wk05: Queue ADT (Abstract Data Type)</title>
+</head>
+<body>
+<h1>CTEC243 Data Structures wk05: Ch04 - Queue ADT (Abstract Data Type)</h1>
+<pre>
+<h2>04.01 - The Queue</h2> 
+    ** Queues are FIFO structures. First-In; First-Out 
+
+    <strong>Constructors</strong>
+        - <em><strong>new</strong></em>used to create an empty queue
+
+    <strong>Transformers</strong> -- modify the code, mutate the queue
+        - <em><strong>enqueue</strong></em> - add element to rear
+        - <em><strong>dequeue</strong></em> - remove and return element from front of queue
+
+    <strong>Queue Usages</strong>
+        - <em>OS often maintain process queue of events waiting to execute based on another event to occur</em>
+        - <em>Computers often have a "buffer" which is a holding area for communication between processes or programs. The buffer is queued.</em>
+        - <em>Real world queues include buying pizza, going to theater, waiting in line anywhere...</em>
+
+<h2>04.02 - The Queue Interface</h2> 
+
+Interfaces tell us what the Queue has to be able to do, but not how it does it
+
+    Similar approach to the 'Stack Interface' ADT.
+        build our own Queue interface with working enque & dequeue
+
+        enqueue(T element) -- can throw overflow exception, adds to queue rear
+        T dequeue() -- can cause underflow exception, removes from queue front
+        boolean 
+            - isFull() 
+            - isEmpty()
+
+        int size() -- returns number of elements in queue
+
+<h2>04.03 - Array-Based Queue Implementations</h2>
+    fixed-front design is flawed. (fixed-front after you dequeue an element you shift each additional element to the left 1 space [to refill index 0])
+    moving-front design is flawed. (as you dequeue an element you shift the front of the queue to the right to and eventually have a very limited queue to work with)
+
+    floating-front -- has a floating front and rear. as the array moves the front and consumes the array, we loop around and use the old beginning of the array as the new end
+    <strong>Bounded queue</strong> 
+
+    <strong>Unbounded queue</strong>
+
+<h2>04.04 - An Interactive Test Driver</h2>
+<h2>04.05 - Link-Based Queue Implementations</h2>
+<h2>04.06 - Application: Palindromes</h2>
+<h2>04.07 - Queue Variations</h2>
+<h2>04.08 - Application: Average Waiting Time</h2>
+<h2>04.09 - Concurrency, Interference, and Synchronization</h2>
+
+</pre>
+</body>
+</html>
