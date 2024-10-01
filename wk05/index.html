@@ -87,6 +87,66 @@ Interfaces tell us what the Queue has to be able to do, but not how it does it
 <h2>04.08 - Application: Average Waiting Time</h2>
 <h2>04.09 - Concurrency, Interference, and Synchronization</h2>
 
+<h2>04 - Review</h2>
+<strong>01) Suppose you start with an empty queue and perform the following operations: enqueue 1, dequeue,
+    enqueue 2, dequeue, enqueue 3, enqueue 4, dequeue, dequeue, enqueue 5. What are the resultant
+    contents of the queue, from front to back?</strong>
+    <em>None of these is correct, it is 5</em>
+
+<strong>02) Recall that within the LinkedQueue the front and rear variables are of type LLNode<T> holding
+    references to the front and rear nodes of the underlying linked list, and the numElements variable is an
+    int and holds the current size of the queue. Which of the following code sequences could be used to
+    correctly implement the isEmpty operation?</strong>
+    <em>return (rear == null);
+
+        return (front == null);
+        
+        return (numElements == 0);
+        
+        All of these are correct.</em>
+
+<strong>03) Suppose you start with an empty queue and perform the following operations: enqueue 1, enqueue 2,
+    dequeue, enqueue 3, enqueue 4, dequeue, enqueue 5. What are the resultant contents of the queue,
+    from front to back?</strong>
+    <em>3,4,5</em>
+
+<strong>04) The following sequence of operations essentially leaves a queue unchanged.</strong>   
+    <em>enqueue followed by dequeue</em>
+
+<strong>05) How did the text decide to handle the possibility of queue underflow?</strong>
+    <em>Throw a QueueUnderflowException if it occurs, and provide an isEmpty operation so a client can prevent underflow.</em>
+
+<strong>06) True or False? We use a call to the join method to indicate that the main thread should wait until
+    another thread has completed executing before continuing.</strong>
+    <em>True</em>
+
+<strong>07) True or False? The isEmpty operation as defined for the text's Queue ADT might throw the
+    QueueUnderflowException.</strong>
+    <em>False</em>
+
+<strong>08) True or False? A java interface can inherit from at most one other interface.</strong>   
+    <em>False</em>
+
+<strong>09) True or False? A "dequeue" allows an application to peek at the front of rear values of a queue.</strong>
+    <em>False</em>
+
+<strong>10) True or False? A queue is a first in, first out structure.</strong>
+    <em>True</em>
+
+<strong>11) True or False? If N represents the number of elements in the queue, then the size method of the
+    ArrayBoundedQueue class is O(N).</strong>
+    <em>False</em>
+
+<strong>13) True or False? If you enqueue 5 elements into an empty queue, and then perform the isEmpty operation 5
+    times, the queue will be empty again.</strong>   
+    <em>False</em>
+
+<strong>14) True or False? A standard linked list provides a good implementation of a "Deque".</strong>
+    <em>False</em>
+
+<strong>15) True or False? When implementing a queue with a linked list, the front of the queue is also the front
+    of the linked list.</strong>
+    <em>True</em>
 </pre>
 </body>
 </html>
