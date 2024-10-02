@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC 243 Data Structures wk06: Ch05 - The Collection ADT (Abstract Data Type)</title>
+</head>
+<body>
+<pre>
+<h1>CTEC 243 Data Structures wk06: Ch05 - The Collection ADT (Abstract Data Type)</h1>
+<h2>05.01 Array-Based Collections</h2>
+    Stacks and Queues restrict access based on the order in which data was stored
+
+    <strong>Collection ADT</strong> is the most basic ADT that provides ability to retrieve information non-reliant on where data is stored. 
+
+    <strong>Assumptions for Collection</strong> 
+        - <em><strong>Addition, Removal, and Retrieval of elements</strong></em>
+        - <em><strong>Collection content access is based on equality of objects (using equals of methods)</strong></em>
+        - <em><strong>Allow duplicate elements, do not allow <code>null</code> elements</strong></em>
+        - <em><strong><code>add</code> and <code>remove</code> operations return a <code>boolean</code> indicating success</strong></em>
+                ** this ADT uses boolean instead of exceptions, like from previous ADTs
+
+        <code>
+            public interface CollectionInterface<T>
+                {
+                    boolean add(T element);
+                    // Attempts to add element to collection. Returns true if successful, false otherwise
+
+                    T get(T target);
+                    // Returns an element e from collection such that e.equals(target).
+                    // If no such element exists, return null.
+
+                    boolean contains(T target);
+                    // Returns true if this collection contains an element e such that
+                    // e.equals(taget); otherwise returns false.
+
+                    boolean remove(T target);
+                    // Removes an element e from this collection such that e.equals(target)
+                    // and returns true. if no such element exists, return false.
+
+                    boolean isFull();
+                    boolean isEmpty();
+                    int size();
+                }
+        </code>
+
+    *** Go to 'CollectionExamples' in Projects/Java/243/CollectionExamples
+        
+
+<h2>05.02 Linked-Based Collections</h2>
+<h2>05.03</h2>
+<h2>05.04</h2>
+<h2>05 - Review</h2>
+
+</pre>
+</body>
+</html>
