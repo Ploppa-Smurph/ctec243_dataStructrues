@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTEC 243 Data Structures wk09: Binary Search Tree ADT</title>
+</head>
+<body>
+<h1>CTEC 243 Data Structures wk09: Binary Search Tree ADT</h1>
+<h2>07.01 - Trees</h2>
+    <strong>Tree</strong> - structure with unique starting node (root). each node of a tree is capable of having multiple successors (children), but can only have a single predecessor (parent).
+    <strong>Root</strong> - top node, no parent
+    <strong>Parent Node</strong> - predecessor of a node
+    <strong>Subtree</strong> - a node and all of it's decendants
+
+    ** in a Tree - no child can have more than 1 parent... for each child there must be only 1 parent
+
+    <strong>Ancestor</strong> - a parent of a node, or a parent of an ancestor  = predecessor nodes 
+    <strong>Descendant</strong> - child of a node, or a child of a decendant    = successor nodes
+    <strong>Leaf</strong> - a node with no children                             = endpoint of a branch
+    <strong>Interior Node</strong> - Non-leaf nodes ??
+    <strong>Siblings</strong> - nodes with the same parent  
+    <strong>Level</strong> - distance from root (number of connections to root and self)
+    <strong>Height</strong> - the max level of the tree
+
+    <strong>Breadth-First Traversal</strong>
+        aka "Level-Order Traversal" start at root, go down a level starting from left taking in all nodes before lowering to next level
+
+        ** goes wider before going deeper
+
+        <strong>** When programming Breadth-First Traversal we use a queue **</strong>
+            you 1st: instantiate a queue of nodes
+                2nd: if the root is != null
+                    queue.enqueue(root)
+                3rd: while !queue.isEmpty() 
+                    dequeue an element from the node
+                4th: enqueue children of node from left to right into new queue 
+
+    <strong>Depth-First Traversal</strong>
+        start at root and work your way down starting from the left to the bottom
+
+        ** goes deep before going wide
+
+        <strong>** When programming Depth-First Traversal we use a stack **</strong>
+<h2>07.02 - Binary Tree</h2>
+    each node is capable of having 2 child nodes, Left child node & Right child node
+
+<h2>07.03 - </h2>
+
+<h2>07.04 - </h2>
+
+<h2>07 - Review</h2>
+<strong>01) </strong>
+    <em></em>
+    
+<strong>02) </strong>
+    <em></em>
+
+<strong>03) </strong>
+    <em></em>
+
+<strong>04) </strong>
+    <em></em>
+
+<strong>05) </strong>
+    <em></em>
+
+<strong>06) </strong>
+    <em></em>
+
+<strong>07) </strong>
+    <em></em>
+
+<strong>08) </strong>
+    <em></em>
+    
+<strong>09) </strong>
+    <em></em>
+
+<strong>10) </strong>
+    <em></em>
+
+<strong>11) </strong>
+    <em></em>
+
+<strong>12) </strong>
+    <em></em>
+
+<strong>13) </strong>
+    <em></em>
+
+<strong>14) </strong>
+    <em></em>
+
+
+</body>
+</html>
