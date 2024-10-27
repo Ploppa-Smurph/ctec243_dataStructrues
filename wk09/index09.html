@@ -64,35 +64,46 @@
     see Projects/Java/243/BST
 
 <h2>07 - Review</h2>
-<strong>01) </strong>
-    <em></em>
+<strong>01) True or False? A depth-first traversal of a tree is also known as a level-order traversal.</strong>
+    <em>False</em>
     
-<strong>02) </strong>
-    <em></em>
+<strong>02) True or False? When a binary search tree is balanced, it provides O(log2N) search, addition, and removal.</strong>
+    <em>True</em>
 
-<strong>03) </strong>
-    <em></em>
+<strong>03) True or False? The number of nodes in a non-empty tree is equal to the number of nodes in its left subtree plus the number of nodes in its right subtree plus 1.</strong>
+    <em>True</em>
 
-<strong>04) </strong>
-    <em></em>
+<strong>04) True or False? When a binary search tree is balanced, it provides O(N2) search, addition, and removal</strong>
+    <em>False</em>
 
-<strong>05) </strong>
-    <em></em>
+<strong>05) Recall that within our BinarySearchTree class the root variable is of type BSTNode&lt;T&gt;. Which of
+    the following code sequences could be used as the body of the isEmpty method?</strong>
+    <em>return root == null</em>
 
-<strong>06) </strong>
-    <em></em>
+<strong>06) For our binary search trees, the public method, size, calls the private recursive method, recSize,
+    and passes it a reference to the root of the tree, returning to the caller whatever is returned to it by
+    recSize. Critique the following implementation of recSize, assuming its parameter variable is node:</strong>
+    <code>if (node == null)
+        return 0;
+    else
+        return 1 + recSize(node.getLeft()) + recSize(node.getRight());</code>
+    <em>the code works correctly</em>
 
-<strong>07) </strong>
-    <em></em>
+<strong>07) Show the post-order traversal of the tree that results from starting with an empty tree and adding 10,
+    20, 25, 5, 15, 17, 16, 14 and then removing 20.</strong>
+    <em><strike>5, 14, 16, 17, 15, 25, 10</strike></em>
 
-<strong>08) </strong>
-    <em></em>
+<strong>08) In the above tree, the descendants of node A are:</strong>
+    <em>M, D, B, H, G, T</em>
     
-<strong>09) </strong>
-    <em></em>
+<strong>09) Suppose xOrder is one of our binary search tree traversal methods that is passed a tree node node and a queue q. Which traversal order is provided by the following code?</strong>
+<code>xOrder(node.getLeft(), q);
+    xOrder(node.getRight(), q);
+    q.enqueue(node.getInfo());</code>
+    <em>post order</em>
 
-<strong>10) </strong>
-    <em></em>
+<strong>10) Show the post-order traversal of the tree that results from starting with an empty tree and adding 10, 15, 18, 8, 9, 5 and then removing 9</strong>
+    <em>5, 8, 18, 15, 10</em>
 
 <strong>11) </strong>
     <em></em>
@@ -105,7 +116,6 @@
 
 <strong>14) </strong>
     <em></em>
-
 
 </body>
 </html>
