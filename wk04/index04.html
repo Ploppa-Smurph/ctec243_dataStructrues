@@ -53,12 +53,12 @@
     passed a legal argument, a value between 0 and values.length)?</strong>
     <code>int mystery(int n)
         {
-            in (n == values.length)
+            if (n == values.length)
                 return 0;
             else
                 return (n + mystery(n + 1));
             }   </code>
-    <em>the sum of the values in the array between index n and the end of the array</em>
+    <em>none of these is correct</em>
 
 <strong>02) Given that values is of type LLNode<Integer> and references a linked list (non-empty) of Integer
     objects, what does the following code do if invoked as mystery(values)?</strong>
@@ -116,7 +116,7 @@
         else
           return (n + factorial(n - 1));
       }</code>
-    <em>if fails the smaller-caller question</em>
+    <em></em>
 
 <strong>12) What does the following return, when passed the argument 1564?</strong>
     <code>int recur(int n)
