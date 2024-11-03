@@ -8,9 +8,31 @@
 <body>
 <pre>
 <h1>CTEC 243 Data Structures wk11 Ch 09: The Priority Queue ADT</h1>   
-<h2>09.01 - </h2>
+<h2>09.01 - Priority Queue and Heap</h2>
+    <strong>Priority Queue</strong> is an abstract data type with and interesting accessing protocol - only highest-priority element can be accessed
+        ** useful fo application that processes items by priority
 
-<h2>09.02 - </h2>
+    Priority Queue Interface
+    <strong>enqueue</strong>
+    <strong>dequeue</strong>
+    <strong>isEmpty</strong>
+    <strong>isFull</strong>
+    <strong>size</strong>
+
+    Priority Queue Implementations
+    <strong>Unsorted List</strong> - dequeue requires search through entire list
+    <strong>Array Based-Sorted List</strong> - enqueue expensive
+    <strong>Sorted Linked List</strong> - enquees at O(N)
+    <strong>Binary Search Tree</strong> - averages O(logN) for enqueue and dequeue 
+    <strong>Heap</strong> - gurantees O(logN), even in worst case
+
+    <strong>Heap</strong> - is an implementation of a Priority Queue that uses a 'binary tree' (not Binary Search Tree) and satisfies 2 properties:
+        - <em><strong>Shape property</strong></em> - the tree must be a complete binary tree
+        - <em><strong>Order property</strong></em> - for every node in the tree, the value stored in that node is greater than or equal to the value in each of its children
+            -- there are 'minHeap' and 'maxHeap'
+
+
+<h2>09.02 - Heap</h2>
 
 <h2>09.03 - </h2>
 
