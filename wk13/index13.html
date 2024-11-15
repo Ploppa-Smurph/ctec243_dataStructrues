@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTEC 243 wk13 Ch11: Sorting and Searching Algorithms</title>
 </head>
-<body>
-<pre>
-<h1></h1>
-<h2>11.01 - Sorting</h2>
 
-<h2>11.02 - Simple Sorts</h2>
+<body>
+    <pre>
+<h1></h1>
+<h2>11.01 - Sorting (Selection Sort)</h2> = O(n^2)
+    <a href url="https://youtu.be/cqh8nQwuKNE">Joe James' Java Selection Sort youtube video</a>
+    
+    <strong>Selection Sort</strong> - finds smallest item and returns to 1st node of list
+        ** NOT fast -- O(n^2) -- slow
+    
+    <code>
+        public int[] selectionSort (int[] list) {               -- create int array named selectionSort that accepts an array of ints with a variable named list
+            int i, j, minValue, minIndex, temp = 0              -- declare / create int variable name i, j, minValue, minIndex, temp and set them all to 0
+
+            for (i = 0; i < list.length; i++) {                 -- iterate through the length of the list array
+                minValue = list[i];
+                minIndex = i;                                   -- initialize 'minValue' and 'minIndex' to i (1st unsorted item in list each time outer loop iterates)
+                for (j = i; j < list.length; j++) {             -- inner for loop begins with j set as mutable i for temp comparison purposes
+                    if (list[j] < minValue) {                   -- this checks to see if the list item 'j' is less than minValue
+                        minValue = list[j];                     -- minValue is set to 'j' if j is less than the initial minValue
+                        minIndex = j;                           -- the index is then set to j
+                    }
+                }
+            if (minValue < list[i]) {                           -- after each iteration of the loop we check to see if minValue is still less than the first list value, if the minValue is less there  is no need to swap  
+                temp = list[i];                                 -- the beginning of the swap if minValue is greater than list[i] value.
+                list[i] = list[minIndex];
+                list[minIndex] = temp;
+            }
+        }            
+            return list;                                        -- return the list
+    }
+    </code>
+
+<h3>11.02b - Insertion Sorts</h3> = O(n^2)
+    <a href url="https://youtu.be/lCDZ0IprFw4">Joe James' Java Insertion Sort YouTube video</a>
+    
+    <strong>Insertion Sort</strong> - all items to the left of the item are smaller than the item
+    ** O(n^2) = NOT a fast sorting algorithm because it uses nested loops
+        - useful for small datasets
+    
+
+<h3>11.02c - BubbleSort Algorithm</h3> = O(n^2)
+<a href url="https://youtu.be/F13_wsHDIG4">Joe James' Java BubbleSort Algorithm</a>
+
+    <strong>BubbleSort</strong> - given an array of items it will sort in increasing order
+      - Compares 2 adjacent items and puts larger item to the right
+
+      ++ within the 1st iteration the largest value has 'bubbled' all the way to the right (the end spot)
 
 <h2>11.03 - O(N(log2N)) Sorts</h2>
+<h3>11.03a - Merge Sort</h3> = aka "Divide-and-Conquer" algorithm; O(n log n)
+    <a href url="https://youtu.be/iMT7gTPpaqw">Joe James' Java Merge Sort YouTube video</a>
+
+    <strong>Merge Sort</strong> - sorts in ascending order 
+    ** splits the element total in half, then splits that in half again until there are lists of only single items to compare
+    once the lists are sorted then the they are compared and added back to the larger total, until the process is completed.
+
+    ** Recursive algorithm; 
+    ++ faster -- each step doubles the size of the pool, so it is completed quickly
+
+<h3>11.03b - Quick Sort</h3> = O
+    <a href url="https://youtu.be/Fiot5yuwPAg">Joe James' Java Quick Sort YouTube video</a>
+    
 
 <h2>11.04 - More Sorting Considerations</h2>
 
@@ -68,4 +124,5 @@
 
 </pre>
 </body>
+
 </html>
