@@ -1,12 +1,3 @@
-After watching the video by Gayle Laakmann McDowell on graph traversal methods, I found the explanation of Depth-First Search (DFS) and Breadth-First Search (BFS) particularly insightful. Here’s a concise breakdown of these concepts:
+After watching the HackerRanks video, with Gayle Laakmann McDowell, and reading the book, I noticed some interesting differences in how they approach graph traversal. Gayle’s video is very practical and hands-on, showing how to implement Depth-First Search (DFS) and Breadth-First Search (BFS) with detailed coding examples. She uses recursion for DFS and a queue for BFS, which makes it easy to see how they work. The book, on the other hand, takes a more theoretical approach, treating traversal as a separate application and providing a flexible framework for graph operations.
 
-Implementation Differences
-In the video, the graph was implemented using adjacency lists, which is an efficient way to represent sparse graphs. Each vertex maintains a list of its adjacent vertices. This contrasts with the approach in our textbook, where adjacency matrices are also discussed. Adjacency lists are generally more space-efficient for graphs with fewer edges, whereas adjacency matrices are easier to work with for dense graphs but can consume more memory.
-
-DFS vs. BFS
-The main difference between DFS and BFS lies in their approach to exploring the graph. DFS goes as deep as possible down one branch before backtracking, using a stack data structure either explicitly or through recursion. In contrast, BFS explores all the neighbors at the current depth before moving on to nodes at the next depth level, utilizing a queue data structure.
-
-Situational Advantages
-DFS is advantageous for scenarios like exploring mazes or finding all possible solutions, as it delves deeply into each path. It’s also useful for detecting cycles and performing topological sorting. On the other hand, BFS is ideal for finding the shortest path in unweighted graphs and for scenarios where the solution is closer to the starting point. It’s often used in level-order traversal of trees.
-
-Overall, the video was effective in clarifying these concepts, though it could have delved deeper into practical examples and edge cases to enhance understanding further. How the graph was implemented in the video was straightforward and aligned well with common programming practices, providing a solid foundation for understanding both DFS and BFS in depth.
+The main thing with DFS is that it goes deep into one path before backtracking, making it great for exploring all possible paths. BFS, meanwhile, goes level by level, which is perfect for finding the shortest path in unweighted graphs. Both methods have their own perks, with DFS being ideal for puzzles and BFS for finding the quickest connections in things like network routing.
