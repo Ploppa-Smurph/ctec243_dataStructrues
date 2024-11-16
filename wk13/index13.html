@@ -56,7 +56,7 @@
       ++ within the 1st iteration the largest value has 'bubbled' all the way to the right (the end spot)
 
 <h2>11.03 - O(N(log2N)) Sorts</h2>
-<h3>11.03a - Merge Sort</h3> = aka "Divide-and-Conquer" algorithm; O(n log n)
+<h3>11.03a - Merge Sort</h3> = O(n log n)
     <a href url="https://youtu.be/iMT7gTPpaqw">Joe James' Java Merge Sort YouTube video</a>
 
     <strong>Merge Sort</strong> - sorts in ascending order 
@@ -66,16 +66,35 @@
     ** Recursive algorithm; 
     ++ faster -- each step doubles the size of the pool, so it is completed quickly
 
-<h3>11.03b - Quick Sort</h3> = O
+<h3>11.03b - Quick Sort</h3> = O(n log n)
     <a href url="https://youtu.be/Fiot5yuwPAg">Joe James' Java Quick Sort YouTube video</a>
-    
+
+    <strong>Quick Sort</strong> - uses the 'pivot' (a value in the array) and then moves values that are smaller to the left and values that are larger to the right.
+     -- the left partition is < the pivot
+     -- the right partition is > the pivot 
+
+     ** Recursive algorithm; a 'divide-and-conquor' algorithm since it breaks the items down into simpler smaller pieces
+     + efficient for large data sets
+
+     -- Worst case = O(n^2)
+     == Average case = O(n log n) == use a randomly chosen pivot for best outcomes
 
 <h2>11.04 - More Sorting Considerations</h2>
 
 <h2>11.05 - Searching</h2>
 
 <h2>11.06 - Heaps and Heap Sort</h2>
+<h3>11.04a Heaps and Heap Sorts</h3> -- slower than 'merge sort'
+<a href url="https://youtu.be/H5kAcmGOn4Q">Heaps and Heap Sort YouTube video</a>
+    <strong>Heap</strong> - heap is a tree; sift down when an item is replaced to return to heap criteria
 
+    <strong>Siftdown</strong> - process of returning incorrect item at top to it's proper spot
+
+    <strong>Heapify</strong> - process of making data into a heap; the the siftdown happens to organize the heap properly
+
+    <strong>Siftup</strong> - when item is added it is added to the end (bottom) of the tree and is then sifted up into it's correct position in the tree
+
+    <strong>Heap Sort</strong> - slowly adds each item from the data set to correctly build the heap as it goes; slower than heapify method
 <h2>11 - Review</h2>
 <strong>01) True or False? The efficiency of the Insertion Sort is O(N2) where N is the size of the list being sorted.</strong>
     <em>True</em>
