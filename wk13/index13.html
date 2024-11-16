@@ -95,6 +95,62 @@
     <strong>Siftup</strong> - when item is added it is added to the end (bottom) of the tree and is then sifted up into it's correct position in the tree
 
     <strong>Heap Sort</strong> - slowly adds each item from the data set to correctly build the heap as it goes; slower than heapify method
+
+<h2>11.05 - Searching</h2>    
+
+This section reviews material scattered throughout the text related to searching.
+• Here we bring these topics together to be considered in relationship to each other to gain
+an overall perspective.
+• Searching is a crucially important information processing activity. Options are closely related to
+the way data is structured and organized. 
+
+<strong>Sequential Searching</strong>
+• If we want to add elements as quickly as possible to a collection, and we are not as concerned about how long
+it takes to find them we would put the element 
+    – into the last slot in an array-based collection
+    – into the first slot in a linked collection
+• To search this collection for the element with a given key, we must use a simple linear (or sequential) search
+    – Beginning with the first element in the collection, we search for the desired element by examining each subsequent element’s
+key until either the search is successful or the collection is exhausted.
+– Based on the number of comparisons this search is O(N)
+– In the worst case we have to make N key comparisons.
+– On the average, assuming that there is an equal probability of searching for any element in the collection, we make N/2
+comparisons for a successful search High-Probability Ordering 
+• Sometimes certain collection elements are in much greater demand than others. We can then improve the
+search:
+– Put the most-often-desired elements at the beginning of the
+collection
+– Using this scheme, we are more likely to make a hit in the first
+few tries, and rarely do we have to search the whole collection.
+• If the elements in the collection are not static or if we
+cannot predict their relative demand, we can
+– move each element accessed to the front of the collection
+– as an element is found, it is swapped with the element that
+precedes it
+• collections in which the relative positions of the elements
+are changed in an attempt to improve search efficiency
+are called self-organizing or self-adjusting collections.
+Sorted collections
+• If the collection is sorted, a sequential search no longer needs to
+search the whole collection to discover that an element does not
+exist. It only needs to search until it has passed the element’s logical
+place in the collection—that is, until an element with a larger key
+value is encountered.
+• Another advantage of linear searching is its simplicity.
+• The binary search is usually faster, however, it is not guaranteed to
+be faster for searching very small collections.
+• As the number of elements increases, however, the disparity
+between the linear search and the binary search grows very quickly.
+• The binary search is appropriate only for collection elements stored
+in a sequential array-based representation.
+• However, the binary search tree allows us to perform a binary
+search on a linked data representation
+Hashing
+• We end our discussion of search
+algorithms by pointing out that the hash
+table approach to storage presented in
+Sections 4 through 6 of Chapter 8 allows
+constant search time in many situations.
 <h2>11 - Review</h2>
 <strong>01) True or False? The efficiency of the Insertion Sort is O(N2) where N is the size of the list being sorted.</strong>
     <em>True</em>
